@@ -1,0 +1,16 @@
+.container div {
+    background: #000000b3;
+    min-width: 10rem;
+    min-height: 10rem;
+}
+
+.container {
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #8080808f;
+    max-width: 50%;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
