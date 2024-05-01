@@ -65,9 +65,18 @@ function checarEmpate() {
 }
 
 function encerrarJogo(vencedor = null) {
+    const telaEscura = document.getElementById("tela-escura");
+    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
+    let mensagem = null;
+
+    telaEscura.style.display = "block";
+    telaEscura.appendChild(h2);
+    telaEscura.appendChild(h3);
+    
     if (vencedor) {
-        console.log("vencedor: " + vencedor);
+        h2.innerHTML = `O jogador <span>${vencedor}</span> venceu"`
     } else {
-        console.log("Empatou");
+        h2.innerHTML = "Empatou";
     }
 }
