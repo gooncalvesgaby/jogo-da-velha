@@ -75,8 +75,15 @@ function encerrarJogo(vencedor = null) {
     telaEscura.appendChild(h3);
     
     if (vencedor) {
-        h2.innerHTML = `O jogador <span>${vencedor}</span> venceu"`
+        h2.innerHTML = `O jogador <span>${vencedor}</span> venceu`
     } else {
         h2.innerHTML = "Empatou";
     }
+
+    let contador = 3;
+    setInterval(() => {
+        h3.innerHTML = `Reiniciando jogo em ${contador--}`;
+    }, 1000);
+
+    setTimeout(() => location.reload(), 4000);
 }
